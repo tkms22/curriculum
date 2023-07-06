@@ -1,0 +1,27 @@
+.header {
+    width: 400px;
+    height: 100px;
+    background-color: #141f40;
+}
+
+.main {
+    display: flex;
+}
+
+.left {
+    width: 150px;
+    height: 250px;
+    background-color: #80bfa8;
+}
+
+.right {
+    width: 250px;
+    height: 250px;
+    background-color: #8c2727;
+}
+
+.footer {
+    width: 400px;
+    height: 100px;
+    background-color: #d98d30;
+}
