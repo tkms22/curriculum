@@ -26,7 +26,10 @@ function getMultiplenumber($number) {
 }
 ?>
 
-<?php echo date("Y-m-d H:i:s", time()); ?>
+<?php 
+ini_set('date.timezone', 'Asia/Tokyo');
+echo date("Y-m-d H:i:s", time());
+?>
 <p>名前は<?php echo $my_name; ?>です。</p>
 <p>番号は<?php echo $number; ?>です。</p>
 <p>結果は<?php echo getMultiplenumber($number); ?>です。</p>
