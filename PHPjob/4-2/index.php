@@ -31,6 +31,7 @@ $newpostdata = $newGetData->getPostData();
     <main class="main">
       <p>記事IDタイトルカテゴリ本文投稿日</p>
       <?php foreach ($newpostdata as $value) {
+        //*カテゴリーの表示変更は上手くいきました。
           if($value["category_no"] == 1) {
             $value["category_no"]  = "食事";
           }else if($value["category_no"] == 2) {
