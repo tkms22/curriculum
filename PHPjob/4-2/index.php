@@ -32,7 +32,11 @@ $newpostdata = $newGetData->getPostData();
       <p>記事IDタイトルカテゴリ本文投稿日</p>
       <?php foreach ($newpostdata as $value) {
           if($value["category_no"] == 1) {
-          $value["category_no"]  == "旅行";
+            $value["category_no"]  = "食事";
+          }else if($value["category_no"] == 2) {
+              $value["category_no"]  = "旅行";
+          }else if($value["category_no"] == 3) {
+              $value["category_no"]  = "その他";
           }
           echo $value["id"].$value["title"],$value["category_no"].$value["comment"].$value["created"]."<br>";
        } ?>
