@@ -30,12 +30,12 @@ $newpostdata = $newGetData->getPostData();
     </header>
     <main class="main">
       <p>記事IDタイトルカテゴリ本文投稿日</p>
-        <?php foreach ($newpostdata as $value) {
-            if($value["category_no"] == 1) {
-              $value["category_no"]  == "旅行";
-            }
-            echo $value["id"].$value["title"],$value["category_no"].$value["comment"].$value["created"]."<br>";
-        } ?>
+      <?php foreach ($newpostdata as $value) {
+          if($value["category_no"] == 1) {
+          $value["category_no"]  == "旅行";
+          }
+          echo $value["id"].$value["title"],$value["category_no"].$value["comment"].$value["created"]."<br>";
+       } ?>
     </main>
     <footer class="footer">Y&I group.inc</footer>
 </body>
