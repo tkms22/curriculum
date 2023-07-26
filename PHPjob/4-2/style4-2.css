@@ -7,17 +7,16 @@ header {
     width: 1000px;
     height: 120px;
     text-align: end;
+    
 }
 
 .upper_header {
     height: 60px;
-    vertical-align: middle;
     background-color: #87ceeb;
 }
 
 .lower_header {
     height: 60px;
-    vertical-align: middle;
     background-color: #00ffff;
 }
 
@@ -30,8 +29,16 @@ img {
     left: 0;
 }
 
-main {
-    text-align: center;
+.main {
+    margin: 10px 100px;
+}
+
+.main thead {
+    background-color: #87ceeb;
+}
+
+.main tbody {
+    background-color: #e0ffff;
 }
 
 footer {

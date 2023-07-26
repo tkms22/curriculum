@@ -17,32 +17,49 @@ $newpostdata = $newGetData->getPostData();
     <link rel="stylesheet" href="style4-2.css"/>
 </head>
 <body>
+  <div class="wrapper">
     <header class="header">
       <div class="upper_header">
-          <p>ようこそ<?php echo " ".$newusersdata["last_name"].$newusersdata["first_name"]." "; ?>さん</p>
+        <p>ようこそ<?php echo " ".$newusersdata["last_name"].$newusersdata["first_name"]." "; ?>さん</p>
       </div>
       <div class="lower_header">
-          <p>最終ログイン日：<?php echo $newusersdata["last_login"]; ?></p>
+        <p>最終ログイン日：<?php echo $newusersdata["last_login"]; ?></p>
       </div>
       <div>
-          <img src="https://letsengineer.jp/storage/cms-files/1599315827_logo.png">
+        <img src="https://letsengineer.jp/storage/cms-files/1599315827_logo.png">
       </div>
     </header>
     <main class="main">
-      <p>記事IDタイトルカテゴリ本文投稿日</p>
-      <?php foreach ($newpostdata as $value) {
-        //*カテゴリーの表示変更は上手くいきました。
-          if($value["category_no"] == 1) {
-            $value["category_no"]  = "食事";
-          }else if($value["category_no"] == 2) {
-              $value["category_no"]  = "旅行";
-          }else if($value["category_no"] == 3) {
-              $value["category_no"]  = "その他";
-          }
-          echo $value["id"].$value["title"],$value["category_no"].$value["comment"].$value["created"]."<br>";
-       } ?>
+        <table align="center">
+            <thead>
+                <tr>
+                    <th>記事ID</th>
+                    <th>タイトル</th>
+                    <th>カテゴリー</th>
+                    <th>本文</th>
+                    <th>投稿日</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($newpostdata as $value) {
+                    if($value["category_no"] == 1) {
+                        $value["category_no"]  = "食事";
+                    }else if($value["category_no"] == 2) {
+                        $value["category_no"]  = "旅行";
+                    }else if($value["category_no"] == 3) {
+                        $value["category_no"]  = "その他";
+                    } ?>
+                <tr>
+                    <td><?= $value["id"] ?></td>
+                    <td><?= $value["title"] ?></td>
+                    <td><?= $value["category_no"] ?></td>
+                    <td><?= $value["comment"] ?></td>
+                    <td><?= $value["created"] ?></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </main>
     <footer class="footer">Y&I group.inc</footer>
+  </div>
 </body>
-
-
