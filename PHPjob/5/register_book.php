@@ -52,11 +52,11 @@ if (isset($_POST["registration"])) {
     <h1>本 登録画面</h1>
     <form method="POST" action="">
         <input type="text" name="title" id="title" placeholder="タイトル"><br><br>
-        <input type="text" name="release_date" id="release_date" placeholder="発売日"><br>
+        <input type="date" name="release_date" id="release_date" value="2023-08-8"><br>
         <p>在庫数</p>
         <select name="number">
             <option value="default">選択してください</option>
-            <?php for ($i=0;$i<=100;$i++){ ?>
+            <?php for ($i=1;$i<=100;$i++){ ?>
                 <option value="<?php echo $i; ?>">
                     <?php echo $i; ?>
                 </option>

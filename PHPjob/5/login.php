@@ -53,7 +53,7 @@ if (!empty($_POST)) {
         <h2>ログイン画面<button onclick="location.href='signUp.php'" class="green-button">新規ユーザー登録</button></h2>
         <form method="post" action="">
             <input type="text" name="name"  placeholder="ユーザー名"><br><br>
-            <input type="text" name="pass" placeholder="パスワード"><br><br>
+            <input type="password" name="pass" placeholder="パスワード"><br><br>
             <input type="submit" value="ログイン" class="blue-button">
         </form>
     </body>
