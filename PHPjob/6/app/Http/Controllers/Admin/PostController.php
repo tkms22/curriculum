@@ -29,8 +29,8 @@ class PostController extends Controller
 
   public function index(Request $request)
   {
-    $post = Post::all();
+    $posts = Post::all();
 
-    return view('admin.post');
+    return view('admin.post', ['posts' => $posts]);
   }
 }
