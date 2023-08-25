@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id');
-            $table->string('body'); 
+            $table->bigInteger('user_id')->nullable();
+            $table->string('body')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
